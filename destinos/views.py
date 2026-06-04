@@ -7,3 +7,4 @@ def inicio(request):
     return render(request, 'index.html', {
         'destinos': destinos
     })
+
