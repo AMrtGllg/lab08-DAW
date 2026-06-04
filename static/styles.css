@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color:#faf4bf;
+    color:#3d2f22;
+    font-family:'Lora', serif;
+}
+
+
+.franja{
+    height:40px;
+    background-image:url('/static/pattern.svg');
+    background-repeat:repeat-x;
+    background-size:auto 40px;
+}
+
+
+header{
+    text-align:center;
+    padding-bottom:30px;
+}
+
+h1{
+    font-family:'Ruslan Display', serif;
+    font-size:110px !important;
+
+    color:#6B3E26;
+    letter-spacing:3px;
+    margin-top:20px;
+    margin-bottom:5px;
+
+    text-shadow:2px 2px 4px rgba(0,0,0,0.08);
+}
+
+.subtitulo{
+
+    font-size:1.4rem;
+    color:#58350f;
+
+    max-width:800px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:20px;
+
+    font-style:italic;
+}
+
+.contenedor{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+
+    padding:40px 0;
+}
+
+
+.card{
+    background:white;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    transition:all .3s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.contenido{
+    padding:22px;
+}
+
+.contenido h2{
+    font-family:'Ruslan Display', serif;
+    font-size:2rem;
+    font-weight:400;
+
+    margin-bottom:15px;
+
+    color:#7a4b2b;
+}
+
+.contenido p{
+    text-align:justify;
+    line-height:1.7;
+}
+
+
+.precio{
+    margin-top:18px;
+
+    font-size:1.25rem;
+    font-weight:bold;
+
+    color:#8b5a2b;
+}
+
+
+.oferta{
+    margin-top:15px;
+
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    background:#a65a2e;
+    color:white;
+
+    font-size:.9rem;
+    letter-spacing:.5px;
+}
+
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.8rem;
+    }
+
+    .contenido h2{
+        font-size:1.6rem;
+    }
+
+}

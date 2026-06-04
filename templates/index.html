@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos Turísticos del Perú</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<body>
+
+<header>
+    <div class="franja"></div>
+    
+    <h1>Recorre el Perú</h1>
+
+    <p class="subtitulo">
+        Un recorrido por la historia, cultura y paisajes más emblemáticos del país.
+    </p>
+
+    <div class="franja"></div>
+
+</header>
+
+<section class="contenedor">
+
+{% for destino in destinos %}
+
+<div class="card">
+
+    <img src="{{ destino.imagenCiudad.url }}" alt="{{ destino.nombreCiudad }}">
+
+    <div class="contenido">
+
+        <h2>{{ destino.nombreCiudad }}</h2>
+
+        <p>
+            {{ destino.descripcionCiudad }}
+        </p>
+
+        <div class="precio">
+            S/. {{ destino.precioTour }}
+        </div>
+
+        {% if destino.ofertaTour %}
+            <div class="oferta">
+                Oferta disponible
+            </div>
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</section>
+
+</body>
+</html>
